@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "hafs";
+    src: url('/fonts/hafs.eot');
+    src: url('/fonts/hafs.woff2') format('woff2'),
+    url('/fonts/hafs.woff') format('woff'),
+    url('/fonts/hafs.otf') format('opentype');
+}
+
+[arabic]{
+    font-family: hafs;
+    font-size: 36px;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(252, 255, 245); display: flex;align-items: center;justify-content: center;
+}
+
+main{
+    max-width:600px;
+    margin:50px;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+button{
+    font: inherit;
+    margin: 0;
+    margin-top: 30px;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    line-height: inherit;
+    width: 100%;
+    border-radius: 8px;
+    touch-action: manipulation;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 14px 26px;
+    font-weight: bold;
+    height: 56px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: all 0.4s;
+    background: #075f11;
+    color: white;
+    -webkit-appearance: button;
+    cursor: pointer;
+}

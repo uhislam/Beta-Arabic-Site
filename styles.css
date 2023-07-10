@@ -21,7 +21,8 @@ body > div:first-child{
     max-width: 416px;
     background-color: rgb(247, 248, 250);
     padding: 16px;
-    box-shadow: 10px 10px 20px rgb(232, 232, 232);
+    box-shadow: 10px 0px 20px rgb(232, 232, 232);
+    z-index: 1;
 }
 
 nav{
