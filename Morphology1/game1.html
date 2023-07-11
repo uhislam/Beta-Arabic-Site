@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles2.css" />
+    <script src="scripts2.js"></script>
+</head>
+<body style="margin: 0;padding: 0; height:100%;">
+    <style>
+        @keyframes MoveUpDown{
+            50%{
+                transform:translateY(0%);
+            }
+            0%,100%{
+                transform:translateY(-10%);
+            }
+        }
+    </style>
+    <div id="hide" style="display: flex; align-items: center;justify-content: center;height:100%;flex-direction: column;">
+        <img style="position: relative; transform: translateY(0%); animation: MoveUpDown 5s ease infinite;" src="green.svg" height="200px" width="200px">
+        <h3 style="font-family: 'Courier New', Courier, monospace;">Ready to practice Mithal?</h3>
+    <button onclick="startGame();show()">Let's Go</button>
+    </div>
+        
+        <fieldset id="show" style="display: none;">
+            <legend>
+            <b>Select the verb given the Quranic context:</b></legend>
+        
+        <blockquote arabic>    
+            <span tooltip="In the name of Allah">بِسْمِ</span>
+            <span tooltip="(your answer will go here)">____</span>
+            <span tooltip="The Most Merciful">ٱلرَّحْمَـٰنِ</span>
+            <span tooltip="The Especially Merciful">ٱلرَّحِيمِ</span>
+            <span tooltip="ayah number 98">﴿٩٨﴾</span>
+        </blockquote>
+        <p>The root letters are: <span arabic>ا س م</span> and the pronoun is <span arabic>هو</span></p>
+            <div style="display: flex; flex-direction: column;">
+                <div>
+                    <input type="radio" id="contactChoice1" name="contact" value="email" />
+              <label arabic for="contactChoice1">باسم</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice2" name="contact" value="phone" />
+              <label arabic for="contactChoice2">فاتح</label>
+                </div>
+                <div>
+                    <input type="radio" id="contactChoice3" name="contact" value="mail" />
+              <label arabic for="contactChoice3">ضابت</label>
+                </div>
+            </div>
+            <div>
+              <button onclick="check()">Submit</button>
+            </div>
+          </fieldset>
+
+        
+    </div>
+</div>
+    
+</body>
+</html>

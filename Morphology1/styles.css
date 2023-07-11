@@ -1,0 +1,163 @@
+
+/* This sets the body to host two parts, 
+1. left nav column
+2. The content column which is a dynmaic iframe?
+  */
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 100%;
+    margin: 0px;
+    background-color: #ffffff ;
+    height: 100vh;
+}
+
+
+/* I want this to be the first column */
+body > div:first-child{
+    height: 100%;
+    width: 100%;
+    max-width: 416px;
+    background-color: rgb(247, 248, 250);
+    padding: 16px;
+    box-shadow: 10px 0px 20px rgb(232, 232, 232);
+    z-index: 1;
+}
+
+nav{
+    border-radius: 14px;
+    border: rgba(33,36,44,0.16) solid 1px;
+    background-color: white;
+    padding: 12px 0px;
+}
+
+nav > .title{
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px 12px;
+    border-bottom: rgba(33,36,44,0.16) solid 1px;
+}
+
+.title > img{
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.title > h1{
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+nav > ul{
+    margin: 0px 10px;
+    padding: 0px 0px;
+    /* border-top: rgba(33,36,44,0.16) solid 1px; */
+
+}
+
+ul[nav]>li{
+    list-style-type: none;
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+}
+ul[nav]>li>button,ul[nav]>li>button:focus{
+    padding: 24px;
+    border-bottom: rgba(33,36,44,0.16) solid 1px;
+    display: block;
+    color:rgb(2, 62, 27);
+    width:100%;
+    text-align: left;
+    outline: none;
+}
+ul[nav]>li[test]>button{
+    padding: 8px 24px;
+    border-bottom: rgba(33,36,44,0.16) solid 1px;
+    display: block;
+    color:rgb(0, 0, 0);
+    background-color: rgb(229, 229, 229);
+    font-weight:700;
+    border-radius: 5px;
+}
+
+ul[nav]>li>button:hover{
+    background-color: #eeeeee;
+    text-decoration: none;
+    align-content: stretch;
+    align-items: stretch;
+}
+ul[nav]>li[test]>button:hover{
+    background-color: #002f04;
+    text-decoration: none;
+    color:white;
+}
+
+div[block]{
+    padding: 25px 16px;
+    display: flex;
+    margin-top: 20px;
+    background-color: #f7f8fa;
+    border-radius: 4px;
+    color:gray;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+div[block]>a{
+    color: gray;
+}
+
+ul[nav]>li>button>p{
+    position: relative;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+ul[nav]>li>button>p::before{
+    visibility: visible;
+	content: '';
+	position: absolute;
+	opacity: 50%;
+	top: 0;
+	left: 0px;
+	width: 24px;
+	height: 24px;
+    background: url(doc.svg) no-repeat center;
+    color: black;
+    margin-left: -35px;
+    border: gray solid 1px;
+    border-radius: 3px;
+}
+
+ul[nav]>li[test]>button>p::before{
+    visibility: hidden;
+    display: none;
+}
+
+svg{
+    height: 26px;
+    width: 26px;
+    border: black solid 1px;
+    border-radius: 3px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+button{
+    border: none;
+    background-color: white;
+    align-items: stretch;
+}
+
+iframe{
+    width: 100%;
+}
